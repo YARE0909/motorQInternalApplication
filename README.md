@@ -33,7 +33,15 @@ The Vehicle Monitoring System is a web application designed to track vehicle dat
     ```bash
     npm i
     ```
-3. **Run the project**
+3. Set up the database
+   Create a .env file for the database credentials
+   ```bash
+   DB_HOST=your_database_host
+   DB_USER=your_database_user
+   DB_PASSWORD=your_database_password
+   DB_NAME=your_database_name
+   ```
+4. **Run the project**
     ```bash
      npm run dev
     ```
