@@ -43,63 +43,9 @@ The Vehicle Monitoring System is a web application designed to track vehicle dat
    ```
 
 4. Create database tables
-- Create Owners Table
-    ```sql
-    CREATE TABLE Owners (
-        owner_id INT PRIMARY KEY,
-        name VARCHAR(100),
-        contact_info VARCHAR(150)
-    );
-    ```
-
-- Create Vehicles Table
-    ```sql
-    CREATE TABLE Vehicles (
-        vehicle_id INT PRIMARY KEY,
-        make VARCHAR(50),
-        model VARCHAR(50),
-        year INT,
-        fuel_type VARCHAR(50),
-        owner_id INT,
-        FOREIGN KEY (owner_id) REFERENCES Owners(owner_id)
-    );
-    ```
-
-- Create Trips Table
-    ```sql
-    CREATE TABLE Trips (
-        trip_id INT PRIMARY KEY,
-        vehicle_id INT,
-        start_time DATETIME,
-        end_time DATETIME,
-        start_location VARCHAR(100),
-        end_location VARCHAR(100),
-        distance_traveled DECIMAL(10, 2),
-        FOREIGN KEY (vehicle_id) REFERENCES Vehicles(vehicle_id)
-    );
-    ```
-
-- Create Sensors Table
-    ```sql
-    CREATE TABLE Sensors (
-        sensor_id INT PRIMARY KEY,
-        vehicle_id INT,
-        sensor_type VARCHAR(50),
-        sensor_reading DECIMAL(10, 2),
-        timestamp DATETIME,
-        FOREIGN KEY (vehicle_id) REFERENCES Vehicles(vehicle_id)
-    );
-    ```
-- Create Maintenance Table
-    ```sql
-    CREATE TABLE Maintenance (
-        maintenance_id INT PRIMARY KEY,
-        vehicle_id INT,
-        maintenance_type VARCHAR(50),
-        maintenance_date DATETIME,
-        maintenance_cost DECIMAL(10, 2),
-        FOREIGN KEY (vehicle_id) REFERENCES Vehicles(vehicle_id)
-    );
+    Create a MySQL database and set its name in the .env file above in DB_NAME and then run the command below to create all the tables
+    ```bash
+    npm run createTables
     ```
 
 5. **Insert Data**
