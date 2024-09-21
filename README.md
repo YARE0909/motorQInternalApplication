@@ -49,7 +49,10 @@ The Vehicle Monitoring System is a web application designed to track vehicle dat
     ```
 
 5. **Insert Data**
-6. **Run the project**
+6. ```bash
+    npm run fillDatabase
+    ```
+7. **Run the project**
     ```bash
      npm run dev
     ```
