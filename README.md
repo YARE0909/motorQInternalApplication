@@ -1,4 +1,4 @@
-# Vehicle Monitoring System (MotorQ Internal Screening Badckend Application)
+# Vehicle Monitoring System (MotorQ Internal Screening Backend Application)
 
 ## Overview
 The Vehicle Monitoring System is a web application designed to track vehicle data, including trips, sensor readings, and maintenance history. It provides insights into vehicle performance and anomalies, making it easier for owners and fleet managers to monitor and maintain their vehicles.
